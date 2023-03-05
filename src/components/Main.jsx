@@ -7,7 +7,7 @@ export const Main = () => {
   return (
     <View style={{marginTop: Constants.statusBarHeight}}>
 
-        <Text>Rate Repository Application</Text>
+        <Text style={{textAlign: 'center', color: '#E98D09', fontSize: 30}}>APP FACUNDO</Text>
         <RepositoryList/>
         
 
