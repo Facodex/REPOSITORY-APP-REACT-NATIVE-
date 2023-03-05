@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet } from "react-native";
+import StyledText from './StyledText';
 
 const RepositoryItem = (props) => (
         <View
@@ -7,14 +8,13 @@ const RepositoryItem = (props) => (
             style={styles.container}
         >
 
-            <Text style={styles.strong}>Id: {props.id}</Text>
-            <Text>FullName: {props.fullName}</Text>
-            <Text>Description: {props.description}</Text>
-            <Text>Language: {props.language}</Text>
-            <Text>Stars: {props.stargazersCount}</Text>
-            <Text>Forks: {props.forksCount}</Text>
-            <Text>Review: {props.reviewCount}</Text>
-            <Text>Rating: {props.ratingAverage}</Text>
+            <StyledText fontSize='subheading' fontWeight='bold'>{props.fullName}</StyledText>
+            <StyledText >{props.description}</StyledText>
+            <StyledText >Language: {props.language}</StyledText>
+            <StyledText >Stars: {props.stargazersCount}</StyledText>
+            <StyledText >Forks: {props.forksCount}</StyledText>
+            <StyledText >Review: {props.reviewCount}</StyledText>
+            <StyledText >Rating: {props.ratingAverage}</StyledText>
 
         </View>
 );
