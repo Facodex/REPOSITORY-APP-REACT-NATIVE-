@@ -1,25 +1,32 @@
 import React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
-import Constants from 'expo-constants';
+import { View, Text } from 'react-native';
 import { RepositoryList } from './RepositoryList.jsx';
+import { AppBar } from './AppBar.jsx';
+import { Redirect, Route, Switch } from 'react-router-native';
 
 export const Main = () => {
   return (
-    <View style={{marginTop: Constants.statusBarHeight}}>
+    <View style={{ flex: 1 }}>
 
-        <Text style={styles.header}>APP FACUNDO</Text>
-        <RepositoryList/>
+      {/* el AppBar siempre se tiene que mostrar por eso estara fuera de las rutas */}
+      <AppBar />
+
+      {/* Aqui las rutas que se mostrará solo una a la vez  */}
+      <Switch>
+        <Route path='/' exact>
+          <RepositoryList />
+        </Route>
+
+        <Route path='/signin' exact>
+          <Text>Working on it</Text>
+        </Route>
+
+        <Redirect to='/'/>
         
+      </Switch>
+
+
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  header: {
-      backgroundColor: '#1F618D',
-      color: '#fff',
-      textAlign: 'center',
-      fontSize:30
-  }
-});
 
