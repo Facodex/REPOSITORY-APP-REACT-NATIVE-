@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { RepositoryList } from './RepositoryList.jsx';
 import { AppBar } from './AppBar.jsx';
-import { Redirect, Route, Switch } from 'react-router-native';
+import { Routes, Route } from 'react-router-native';
 
 export const Main = () => {
   return (
@@ -12,21 +12,15 @@ export const Main = () => {
       <AppBar />
 
       {/* Aqui las rutas que se mostrará solo una a la vez  */}
-      <Switch>
-        <Route path='/' exact>
-          <RepositoryList />
-        </Route>
+      
+      <Routes>
 
-        <Route path='/signin' exact>
-          <Text>Working on it</Text>
-        </Route>
+          <Route path='/' element={<RepositoryList/>}/>
 
-        <Redirect to='/'/>
-        
-      </Switch>
+          <Route path='/signin' element={<Text>Working it!</Text>}/>
 
-
+      </Routes>
+      
     </View>
   )
 }
-
