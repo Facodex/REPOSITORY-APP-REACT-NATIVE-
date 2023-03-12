@@ -10,17 +10,21 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingVertical: 10,
         marginBottom: 10
+    },
+    error: {
+        borderColor: 'red'
     }
 });
 
-export const StyledTextInput = ({style = {}, ...props}) => {
+export const StyledTextInput = ({style = {}, error,  ...props}) => {
 
-    const inputStyle = {
-        ...styles.textInput, //los estilos de la constante styles
-        style //los estilos de la prop style
-    };
+    const inputStyle = [
+        styles.textInput, //los estilos de la constante styles
+        style, //los estilos de la prop style
+        error && styles.error //si vino error de prop entonces que se le pongan los estilos de error
+    ];
 
     return (
-        <TextInput style={inputStyle}/>
+        <TextInput style={inputStyle} {...props}/>
     )
 }
