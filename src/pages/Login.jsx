@@ -5,8 +5,8 @@ import { StyledTextInput } from '../components/StyledTextInput';
 
 // valores iniciales de nuestro formulario 
 const initialValues = {
-    email: '',
-    password: ''
+    email: 'paloma',
+    password: 'usuariaga'
 };
 
 //  estilos adicionales para usar 
@@ -29,7 +29,7 @@ const FormikInputValue = ({name, ...props}) => {
     return(
         <StyledTextInput
             value={field.value}
-            onChangeText={value => helpers.setValue(value)}
+            onChangeText={ value => helpers.setValue(value)}
             {...props}
         />
     )
@@ -39,7 +39,7 @@ export const Login = () => {
     return (
         <Formik initialValues={initialValues} onSubmit={values => console.log(values)}>
             {
-                ({handleSubmit}) => {
+                ({ handleSubmit }) => {
                     return (
                         <View style={styles.form}>
                             <FormikInputValue name='email' placeholder='E-mail' />
