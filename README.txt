@@ -1,2 +1,2 @@
-Terminamos por hoy 6/3, saltaba un error en consola, problemas con el switch y el
-Redirect del componente Main, pero espero solucionarlo volviendo a lanzar la app
+FORMIK: Crea un contexto que envuelve nuestro formulario y dentro del formulario y todos los componentes que esten dentro
+para poder utilizarlos de una forma mas sencilla

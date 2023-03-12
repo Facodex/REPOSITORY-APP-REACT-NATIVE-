@@ -3,6 +3,7 @@ import { View, Text } from 'react-native';
 import { RepositoryList } from './RepositoryList.jsx';
 import { AppBar } from './AppBar.jsx';
 import { Routes, Route } from 'react-router-native';
+import { Login } from '../pages/Login.jsx';
 
 export const Main = () => {
   return (
@@ -17,7 +18,7 @@ export const Main = () => {
 
           <Route path='/' element={<RepositoryList/>}/>
 
-          <Route path='/signin' element={<Text>Working it!</Text>}/>
+          <Route path='/signin' element={<Login/>}/>
 
       </Routes>
       
