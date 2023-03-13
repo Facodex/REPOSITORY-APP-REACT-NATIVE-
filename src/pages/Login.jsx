@@ -3,7 +3,7 @@ import { Formik, useField } from 'formik'
 import { View, Button, StyleSheet } from 'react-native';
 import { StyledTextInput } from '../components/StyledTextInput';
 import StyledText from '../components/StyledText'
-import { loginValidationSchema } from '../ValidationSchemas/Login';
+import { loginValidationSchema } from '../ValidationSchemas/login';
 
 // valores iniciales de nuestro formulario 
 const initialValues = {
